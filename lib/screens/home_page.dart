@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:forca_app/routes%20/splash_screen_route.dart';
+import 'package:forca_app/drawer/drawer_route.dart';
+
 
 class ForcaHomePage extends StatelessWidget {
   const ForcaHomePage({Key? key}) : super(key: key);
@@ -10,9 +10,10 @@ class ForcaHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Jogo da Forca'),
+        title: const Text('Jogo da Forca'),
       ),
       body: Container(),
+      drawer: const DrawerPage(),
       );
   }
 }
