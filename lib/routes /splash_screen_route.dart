@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:forca_app/routes%20/welcome_route.dart';
 import 'package:forca_app/widgets/circular_image_widget.dart';
 
 class SplashScreenRoute extends StatefulWidget {
@@ -9,7 +12,20 @@ class SplashScreenRoute extends StatefulWidget {
 }
 
 class _SplashScreenRouteState extends State<SplashScreenRoute> {
+
   @override
+  void initState(){
+    super.initState();
+    Timer(const Duration(seconds: 3),(){
+      Navigator.push(context,
+      MaterialPageRoute(builder: (context) => const WelcomeRoutee())
+      );
+    }
+    );
+  }
+
+
+
   Widget build(BuildContext context) {
     return Center(
       child: Column(
@@ -22,7 +38,7 @@ class _SplashScreenRouteState extends State<SplashScreenRoute> {
           const Padding(
             padding: EdgeInsets.only(top: 20.0),
             child: CircularImageWidget(
-                imageProvider: AssetImage('assets/images/forca.jpeg')),
+                imageProvider: AssetImage('assets/images/forca.png')),
           ),
           const Padding(
             padding: EdgeInsets.only(top: 20.0, bottom: 20),
